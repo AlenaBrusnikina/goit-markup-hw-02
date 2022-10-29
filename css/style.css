@@ -1,0 +1,111 @@
+:root {
+    --header-bg: #FFFFFF;
+    --logo-color-blue:  #2196F3;
+    --logo-color-black: #000000;
+    --nav-grey-dark:#212121;
+    --current-active:#2196F3;
+    --nav-grey:: #757575;
+    --hover:#2196F3;
+    --hero-title:#FFFFFF;
+    --hero-bg:#2F303A;
+    --hero-btn-bg:#2196F3;
+    --hero-btn-c: #FFFFFF;
+    --ff-raleway: 'Raleway', sans-serif;
+
+    /* bagF5F5F5
+    hover 2196F3
+    футер 2F303A
+    фон кнопки F5F4FA
+    второй грей757575
+    текс чорний 212121
+    герой 2F303A
+    наша команда F5F4FA
+    колір у футері FFFFFF
+    bg-header FFFFFF
+    logo 000000 */
+
+
+}
+
+.body {
+    font-family: 'Roboto', sans-serif;
+}
+.link {
+    text-decoration: none;
+}
+.list {
+    list-style: none;
+}
+.current-active {
+    color: var(--current-active);
+}
+
+/* --------------HEADER--------------- */
+.header {
+    background-color: var(--header-bg);
+}
+
+.header-logo {
+    font-family: var(--ff-raleway);
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em; 
+    color: var(--logo-color-black);
+}
+
+.header-desc {
+    line-height: 0.86;
+    letter-spacing: 0.03em;
+    color: var(--logo-color-blue);
+}
+
+.header-item-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;   
+    color: var(--nav-grey-dark);
+}
+
+
+.header-items-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--nav-grey);
+}
+
+.header-items-link:hover , 
+.header-item-link:hover {
+    color: var(--hover);
+}
+
+.header-items-link:focus , 
+.header-item-link:focus {
+    color: var(--hover);
+}
+/* ------------------HERO------------------- */
+
+.hero {
+    background-color: var(--hero-bg);
+}
+
+.hero-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--hero-title);
+}
+
+.hero-btn {
+    font-family: inherit;
+    background-color: var(--hero-btn-bg);
+    color: var(--hero-btn-c);
+    
+}
+
+
