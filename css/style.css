@@ -1,111 +1,266 @@
 :root {
-    --header-bg: #FFFFFF;
-    --logo-color-blue:  #2196F3;
-    --logo-color-black: #000000;
-    --nav-grey-dark:#212121;
-    --current-active:#2196F3;
-    --nav-grey:: #757575;
-    --hover:#2196F3;
-    --hero-title:#FFFFFF;
-    --hero-bg:#2F303A;
-    --hero-btn-bg:#2196F3;
-    --hero-btn-c: #FFFFFF;
-    --ff-raleway: 'Raleway', sans-serif;
-
-    /* bagF5F5F5
-    hover 2196F3
-    футер 2F303A
-    фон кнопки F5F4FA
-    второй грей757575
-    текс чорний 212121
-    герой 2F303A
-    наша команда F5F4FA
-    колір у футері FFFFFF
-    bg-header FFFFFF
-    logo 000000 */
-
-
+  --header-bg: #ffffff;
+  --logo-color-blue: #2196f3;
+  --logo-color-black: #000000;
+  --logo-color-white: #ffffff;
+  --current-active: #2196f3;
+  --hover: #2196f3;
+  --focus: #2196f3;
+  --hero-title: #ffffff;
+  --hero-bg: #2f303a;
+  --hero-btn-bg: #2196f3;
+  --primary-grey-dark: #212121;
+  --secondary-grey: #757575;
+  --team-item-bg: #ffffff;
+  --team-bg: #f5f4fa;
+  --color-white: #ffffff;
+  --btn-bg: #f5f4fa;
+  --footer-bg: #2f303a;
+  --footer-item-link: rgba(255, 255, 255, 0.6);
+  --ff-raleway: "Raleway", sans-serif;
 }
 
 .body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-grey-dark);
 }
+
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .list {
-    list-style: none;
+  list-style: none;
 }
-.current-active {
-    color: var(--current-active);
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 /* --------------HEADER--------------- */
 .header {
-    background-color: var(--header-bg);
+  background-color: var(--header-bg);
 }
 
 .header-logo {
-    font-family: var(--ff-raleway);
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em; 
-    color: var(--logo-color-black);
+  font-family: var(--ff-raleway);
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--logo-color-black);
 }
 
-.header-desc {
-    line-height: 0.86;
-    letter-spacing: 0.03em;
-    color: var(--logo-color-blue);
+.header-desc,
+.footer-desc {
+  line-height: 0.86;
+  letter-spacing: 0.03em;
+  color: var(--logo-color-blue);
 }
 
 .header-item-link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;   
-    color: var(--nav-grey-dark);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-grey-dark);
 }
-
 
 .header-items-link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--nav-grey);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-grey);
 }
 
-.header-items-link:hover , 
+.header-items-link:hover,
 .header-item-link:hover {
-    color: var(--hover);
+  color: var(--hover);
 }
 
-.header-items-link:focus , 
+.header-items-link:focus,
 .header-item-link:focus {
-    color: var(--hover);
+  color: var(--focus);
 }
-/* ------------------HERO------------------- */
 
+.header-item-link.current {
+  color: var(--current-active);
+}
+
+/* ------------------HERO------------------- */
 .hero {
-    background-color: var(--hero-bg);
+  background-color: var(--hero-bg);
 }
 
 .hero-title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--hero-title);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--hero-title);
 }
 
 .hero-btn {
-    font-family: inherit;
-    background-color: var(--hero-btn-bg);
-    color: var(--hero-btn-c);
-    
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--color-white);
+  background: var(--hero-btn-bg);
+  cursor: pointer;
 }
 
+.hero-btn:focus {
+  color: var(--focus);
+}
 
+/* -----------------BENEFITS---------------- */
+.benefits-item-title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefits-item-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-grey);
+}
+
+/* ---------------ACTIVITY------------------ */
+.activity-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+/* -------------TEAM---------------------- */
+.team {
+  background: var(--team-bg);
+}
+
+.team-item {
+  background: var(--team-item-bg);
+}
+
+.team-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-item-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-item-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-grey);
+}
+/* --------------FOOTER-------------- */
+.footer {
+  background: var(--footer-bg);
+}
+
+.footer-logo {
+  font-family: var(--ff-raleway);
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--logo-color-white);
+}
+
+.footer-item-maps {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.footer-item-mail,
+.footer-item-tel {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--footer-item-link);
+}
+
+.footer-item-mail:hover,
+.footer-item-tel:hover,
+.footer-item-maps:hover {
+  color: var(--hover);
+}
+
+.footer-item-mail:focus,
+.footer-item-tel:focus,
+.footer-item-maps:focus {
+  color: var(--focus);
+}
+
+/* ------------PORTFOLIO--------- */
+.portfolio-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-grey-dark);
+  background-color: var(--btn-bg);
+  cursor: pointer;
+}
+
+.portfolio-item {
+  background-color: var(--color-white);
+}
+
+.portfolio-item-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-item-text {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--secondary-grey);
+}
+
+.portfolio-btn.current {
+  color: var(--color-white);
+  background-color: var(--current-active);
+}
+
+.portfolio-btn:hover {
+  color: var(--color-white);
+  background-color: var(--hover);
+}
+
+.portfolio-btn:focus {
+  color: var(--focus);
+}
